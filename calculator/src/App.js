@@ -4,9 +4,10 @@ import "./App.css";
 import Paper from "@material-ui/core/Paper";
 import MainButton from "./mainbutton.js";
 import DsBanner from "./ds-banner.js";
-import DnsCalc from "./dns-calc.js";
+import DnsCalc from "./dns-calc/dns-calc.js";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import DnsMain from "./dns-calc/dns-mainpage.js";
 
 class App extends Component {
   constructor(props) {
@@ -27,37 +28,47 @@ class App extends Component {
   }
   render() {
     return (
-      <Paper className="app" >
-        <Grid container direction="row" xs={24} spacing={24}>
-          <Grid
-            item
-            xs={6}
-            className="group-1"
-          >
-          <Grid 
-            container 
-            direction="column" 
-            spacing={24}>
-          <Grid item >
-                <MainButton
-                theState={this.state}
-                changeButtons={() => this.changeButtons()}
-                />
-          </Grid>
-          <Grid item><DsBanner/></Grid>
-          <Grid item><DnsCalc/></Grid>
-          </Grid>
-          </Grid>
-          <Grid item xs={6} className="group-2">
-          <Grid container direction="column" spaceing={24}>
-            <Grid item >
-             <Typography variant="h2" componnt="h1">Constellix Logo</Typography>
+      <Grid container justify="center">
+        <Grid item xs={9}>
+          <Paper className="app">
+            <Grid container direction="row" xs={12} spacing={24}>
+              <Grid item xs={12} className="header">
+                <Grid container direction="row">
+                  <Grid container xs={6}>
+                    <Grid item>
+                      <MainButton
+                        theState={this.state}
+                        changeButtons={() => this.changeButtons()}
+                      />
+                    </Grid>
+                  </Grid>
+                  <Grid container xs={6} justify="center">
+                    <Grid item>
+                      <Typography variant="h2" componnt="h1">
+                        Constellix Logo
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={6} className="group-1">
+                <Grid container direction="column" spacing={24}>
+                  <Grid item>
+                    <DnsMain />
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={6} className="group-2">
+                <Grid container direction="column" spaceing={24}>
+                  <Grid item>
+                    <DsBanner />
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item><DsBanner/></Grid>
-          </Grid>
-          </Grid>
+          </Paper>
         </Grid>
-      </Paper>
+      </Grid>
     );
   }
 }

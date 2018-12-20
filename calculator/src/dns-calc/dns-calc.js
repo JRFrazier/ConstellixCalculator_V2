@@ -22,28 +22,28 @@ function DnsCalc(props) {
       <Paper className={classes.root} elevation={1}>
         <Grid container spacing={16} direction="column">
           <Grid item>
-            <DnsInput labelName="Number of Domains" placeholder=""/>
+            <DnsInput labelName="Number of Domains" placeholder="" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="Number of Records" placeholder=""/>
+            <DnsInput labelName="Number of Records" placeholder="" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="Queries Per Month"/>
+            <DnsInput labelName="Queries Per Month" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="GTD Enabled Domains"/>
+            <DnsInput labelName="GTD Enabled Domains" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="Geo Proximity"/>
+            <DnsInput labelName="Geo Proximity" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="IP Proximity"/>
+            <DnsInput labelName="IP Proximity" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="ANAME Records"/>
+            <DnsInput labelName="ANAME Records" />
           </Grid>
           <Grid item>
-            <DnsInput labelName="Additional User Accounts"/>
+            <DnsInput labelName="Additional User Accounts" />
           </Grid>
         </Grid>
       </Paper>

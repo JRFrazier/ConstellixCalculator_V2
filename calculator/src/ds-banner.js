@@ -8,7 +8,8 @@ const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 1,
-    paddingBottom: theme.spacing.unit * 1
+    paddingBottom: theme.spacing.unit * 1,
+    textAlign: "center"
   }
 });
 
@@ -18,8 +19,8 @@ function DsBanner(props) {
   return (
     <div>
       <Paper className={classes.root} elevation={1}>
-        <Typography variant="h6" component="h4">
-          DNS/Sonar Calc
+        <Typography component="h2" variant="Title">
+          {props.bannerName}
         </Typography>
       </Paper>
     </div>
