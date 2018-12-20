@@ -4,8 +4,9 @@ import "./App.css";
 import Paper from "@material-ui/core/Paper";
 import MainButton from "./mainbutton.js";
 import DsBanner from "./ds-banner.js";
-import DnsCalc from "./dnscalc.js";
+import DnsCalc from "./dns-calc.js";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 
 class App extends Component {
   constructor(props) {
@@ -26,32 +27,34 @@ class App extends Component {
   }
   render() {
     return (
-      <Paper className="app">
-        <Grid container spacing={16}>
+      <Paper className="app" >
+        <Grid container direction="row" xs={24} spacing={24}>
           <Grid
-            container
-            direction="column"
-            spacing={0}
+            item
             xs={6}
             className="group-1"
           >
-            <Grid item xs={6}>
-              <MainButton
+          <Grid 
+            container 
+            direction="column" 
+            spacing={24}>
+          <Grid item >
+                <MainButton
                 theState={this.state}
                 changeButtons={() => this.changeButtons()}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <DsBanner />
-            </Grid>
-            <Grid item xs={6}>
-              <DnsCalc />
-            </Grid>
+                />
           </Grid>
-          <Grid container xs={6} className="group-2">
-            <Grid item xs={6}>
-              this
+          <Grid item><DsBanner/></Grid>
+          <Grid item><DnsCalc/></Grid>
+          </Grid>
+          </Grid>
+          <Grid item xs={6} className="group-2">
+          <Grid container direction="column" spaceing={24}>
+            <Grid item >
+             <Typography variant="h2" componnt="h1">Constellix Logo</Typography>
             </Grid>
+            <Grid item><DsBanner/></Grid>
+          </Grid>
           </Grid>
         </Grid>
       </Paper>

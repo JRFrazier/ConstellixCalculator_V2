@@ -12,7 +12,7 @@ const styles = theme => ({
   }
 });
 
-function PaperSheet(props) {
+function DsBanner(props) {
   const { classes } = props;
 
   return (
@@ -26,8 +26,8 @@ function PaperSheet(props) {
   );
 }
 
-PaperSheet.propTypes = {
+DsBanner.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(PaperSheet);
+export default withStyles(styles)(DsBanner);
