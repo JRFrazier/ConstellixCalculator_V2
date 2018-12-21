@@ -6,11 +6,13 @@ import Fab from "@material-ui/core/Fab";
 const styles = theme => ({
   dns1: {
     position: "absolute",
-    zIndex: 1
+    zIndex: 1,
+    background: "#3846BF"
   },
   dns2: {
     position: "absolute",
-    opacity: 0.4
+    opacity: 0.4,
+    background: "#3846BF"
   }
 });
 

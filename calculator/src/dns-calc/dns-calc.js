@@ -10,7 +10,8 @@ const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 1,
-    paddingBottom: theme.spacing.unit * 1
+    paddingBottom: theme.spacing.unit * 1,
+
   }
 });
 

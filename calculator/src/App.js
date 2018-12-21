@@ -8,7 +8,8 @@ import DnsCalc from "./dns-calc/dns-calc.js";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import DnsMain from "./dns-calc/dns-mainpage.js";
-
+import MonthlyTotal from "./monthlytotal/monthly-total.js"
+import SonarMain from "./sonar-calc/sonar-main.js"
 class App extends Component {
   constructor(props) {
     super(props);
@@ -54,14 +55,15 @@ class App extends Component {
               <Grid item xs={6} className="group-1">
                 <Grid container direction="column" spacing={24}>
                   <Grid item>
-                    <DnsMain />
+                    <DnsMain theState={this.state}/>
+                    <SonarMain theState={this.state}/>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item xs={6} className="group-2">
                 <Grid container direction="column" spaceing={24}>
                   <Grid item>
-                    <DsBanner />
+                  <MonthlyTotal />
                   </Grid>
                 </Grid>
               </Grid>
