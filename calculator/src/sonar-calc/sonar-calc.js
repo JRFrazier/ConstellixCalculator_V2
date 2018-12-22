@@ -6,28 +6,42 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import DnsInput from "../dns-calc/dns-input.js"
 import AddButton from "./add-button.js" 
+import SonarCheckGen from "./sonar-check-gen.js"
 
 const styles = theme => ({
   root: {
-    ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 1,
     paddingBottom: theme.spacing.unit * 1,
+    paddingLeft: theme.spacing.unit * 2,
     minHeight: 690
   }
 });
 
-function SonarCalc(props) {
-  const { classes } = props;
+class SonarCalc extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+  render() {
+  const { classes } = this.props;
 
   return (
     <div>
       <Paper className={classes.root} elevation={1}>
-        <Grid container spacing={16} direction="column">
-            <AddButton /> 
+        <Grid container spacing={16} direction="column" >
+          <Grid item justify="center">
+            <AddButton />
+          </Grid>
+          <Grid item>
+            <SonarCheckGen sonarChecks={this.props.sonarChecks}/>
+          </Grid>
         </Grid>
       </Paper>
     </div>
   );
+  }
 }
 
 SonarCalc.propTypes = {

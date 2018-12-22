@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   dns1: {
@@ -20,7 +21,7 @@ function DnsButton(props) {
   const { classes } = props;
   const dns = !props.dnsButton ? classes.dns2 : classes.dns1;
   return (
-    <div>
+    <Grid item>
       <Fab
         onClick={() => {
           console.log(dns);
@@ -31,7 +32,7 @@ function DnsButton(props) {
       >
         DNS
       </Fab>
-    </div>
+    </Grid>
   );
 }
 

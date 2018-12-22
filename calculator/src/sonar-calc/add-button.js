@@ -3,16 +3,17 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import Add from '@material-ui/icons/Add';
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
-  sonar1: { marginLeft: 45, zIndex: 1, transition: "3", background: "#3846BF" },
+  sonar1: { marginLeft: 45,  background: "#3846BF" },
   
 });
 
 function AddButton(props) {
   const { classes } = props;
   return (
-    <div>
+    <Grid item justify="center">
       <Fab
         color="primary"
         aria-label="DNS"
@@ -20,7 +21,7 @@ function AddButton(props) {
       >
       <Add />
       </Fab>
-    </div>
+    </Grid>
   );
 }
 

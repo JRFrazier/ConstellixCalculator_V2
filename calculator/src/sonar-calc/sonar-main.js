@@ -14,6 +14,12 @@ const styles = theme => ({
   }
 })
 class SonarMain extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      sonar_checks: [1, 2],
+    }
+  }
   render() {
     const { classes } = this.props
     const main = !this.props.theState.sonar ? classes.main2 : classes.main1;  
@@ -23,7 +29,7 @@ class SonarMain extends Component {
           <DsBanner bannerName="Constellix Calculator" />
         </Grid>
         <Grid item>
-          <SonarCalc />
+          <SonarCalc sonarChecks = {this.state.sonar_checks}/>
         </Grid>
       </Grid>
     );

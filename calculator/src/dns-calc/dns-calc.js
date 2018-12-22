@@ -13,10 +13,18 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 1,
 
   }
-});
+})
 
-function DnsCalc(props) {
-  const { classes } = props;
+class DnsCalc extends React.Component {
+  constructor(props) { 
+    super(props);
+    this.state = {
+
+    }
+  }
+
+  render() {
+  const { classes } = this.props
 
   return (
     <div>
@@ -50,6 +58,7 @@ function DnsCalc(props) {
       </Paper>
     </div>
   );
+  }
 }
 
 DnsCalc.propTypes = {

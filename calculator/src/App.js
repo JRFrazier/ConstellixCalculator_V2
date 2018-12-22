@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Grid container justify="center">
-        <Grid item xs={9}>
+        <Grid item xs={10}>
           <Paper className="app">
             <Grid container direction="row" xs={12} spacing={24}>
               <Grid item xs={12} className="header">
