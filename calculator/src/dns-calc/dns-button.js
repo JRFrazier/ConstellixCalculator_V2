@@ -21,11 +21,8 @@ function DnsButton(props) {
   const { classes } = props;
   const dns = !props.dnsButton ? classes.dns2 : classes.dns1;
   return (
-    <Grid item>
+    <Grid item key="dns">
       <Fab
-        onClick={() => {
-          console.log(dns);
-        }}
         color="primary"
         aria-label="DNS"
         className={dns}

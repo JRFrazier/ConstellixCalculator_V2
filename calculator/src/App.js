@@ -25,30 +25,25 @@ class App extends Component {
     } else {
       this.setState({ dns: true, sonar: false });
     }
-    console.log(this.state.dns);
+    
   }
   render() {
     return (
       <Grid container justify="center">
         <Grid item xs={10}>
           <Paper className="app">
-            <Grid container direction="row" xs={12} spacing={24}>
+            <Grid container direction="row" spacing={24}>
               <Grid item xs={12} className="header">
                 <Grid container direction="row">
-                  <Grid container xs={6}>
-                    <Grid item>
+                    <Grid item xs={7} onClick={() => this.changeButtons()}>
                       <MainButton
                         theState={this.state}
-                        changeButtons={() => this.changeButtons()}
                       />
                     </Grid>
-                  </Grid>
-                  <Grid container xs={6} justify="center">
-                    <Grid item>
+                  <Grid item xs={5} >
                       <Typography variant="h2" componnt="h1">
                         Constellix Logo
                       </Typography>
-                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>

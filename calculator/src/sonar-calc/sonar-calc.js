@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import DnsInput from "../dns-calc/dns-input.js"
 import AddButton from "./add-button.js" 
-import SonarCheckGen from "./sonar-check-gen.js"
+import SonarCheckGen from "./sonar-check/sonar-check-gen.js"
 
 const styles = theme => ({
   root: {
@@ -31,8 +31,10 @@ class SonarCalc extends React.Component {
     <div>
       <Paper className={classes.root} elevation={1}>
         <Grid container spacing={16} direction="column" >
-          <Grid item justify="center">
-            <AddButton />
+        <Grid item>
+        <Grid container justify="center" className="sonar-add">
+            <AddButton addCheck={this.props.addCheck}/>
+          </Grid>
           </Grid>
           <Grid item>
             <SonarCheckGen sonarChecks={this.props.sonarChecks}/>

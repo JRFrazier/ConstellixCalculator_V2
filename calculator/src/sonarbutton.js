@@ -16,11 +16,8 @@ function SonarButton(props) {
   const { classes } = props;
   const sonar = !props.sonarButton ? classes.sonar2 : classes.sonar1;
   return (
-    <div>
+    <div key="sonar" >
       <Fab
-        onClick={() => {
-          console.log(sonar);
-        }}
         color="primary"
         aria-label="DNS"
         className={sonar}

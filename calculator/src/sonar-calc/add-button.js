@@ -6,22 +6,23 @@ import Add from '@material-ui/icons/Add';
 import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
-  sonar1: { marginLeft: 45,  background: "#3846BF" },
+  sonar1: {marginBottom: -35, background: "#3846BF" },
   
 });
 
 function AddButton(props) {
   const { classes } = props;
   return (
-    <Grid item justify="center">
+    <div >
       <Fab
         color="primary"
         aria-label="DNS"
         className={classes.sonar1}
+        onClick={() => props.addCheck()}
       >
       <Add />
       </Fab>
-    </Grid>
+    </div>
   );
 }
 

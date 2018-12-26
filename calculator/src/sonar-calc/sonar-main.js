@@ -17,8 +17,16 @@ class SonarMain extends Component {
   constructor(props){
     super(props);
     this.state = {
-      sonar_checks: [1, 2],
+      sonar_checks: [],
     }
+  }
+
+  addCheck() {
+    console.log("Done")
+    const check = this.state.sonar_checks;
+    check.push(1)
+
+    this.setState({sonar_check: check})
   }
   render() {
     const { classes } = this.props
@@ -29,7 +37,7 @@ class SonarMain extends Component {
           <DsBanner bannerName="Constellix Calculator" />
         </Grid>
         <Grid item>
-          <SonarCalc sonarChecks = {this.state.sonar_checks}/>
+          <SonarCalc addCheck={() => this.addCheck()} sonarChecks = {this.state.sonar_checks}/>
         </Grid>
       </Grid>
     );

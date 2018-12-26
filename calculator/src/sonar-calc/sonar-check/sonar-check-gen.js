@@ -12,11 +12,9 @@ class SonarCheckGen extends React.Component {
     }
     render() {
         return(
-            <Grid item>
+            <Grid container spacing={16} direction="column" >
                 {this.props.sonarChecks.map(x => {return(
-                    <Grid container spacing={16} xs={12}>
-                   <SonarCheck key={x} /> 
-                   </Grid>
+                   <SonarCheck key={Math.floor(Math.random() * 130 * ((Math.random() + 5.5) * (Math.random() * 1000.5)))} /> 
                 )}
                )}
             </Grid>

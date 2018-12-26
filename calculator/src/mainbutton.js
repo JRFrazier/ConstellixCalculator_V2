@@ -19,9 +19,9 @@ class MainButton extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <div className={classes.container} onClick={this.props.changeButtons}>
+        <div className={classes.container} >
           {" "}
-          <DnsButton dnsButton={this.props.theState.dns} name="DNS" />
+          <DnsButton  dnsButton={this.props.theState.dns} name="DNS" />
           <SonarButton sonarButton={this.props.theState.sonar} name="Sonar" />
         </div>
       </div>

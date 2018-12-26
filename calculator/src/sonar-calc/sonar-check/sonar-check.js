@@ -11,6 +11,7 @@ const styles = theme => ({
       ...theme.mixins.gutters(),
       paddingTop: theme.spacing.unit * 1,
       paddingBottom: theme.spacing.unit * 1,
+      marginRight: 16,
   
     }
   });
@@ -18,7 +19,7 @@ const styles = theme => ({
 function SonarCheck(props) {
     const { classes} = props;
     return (
-        <Grid item xs={12} key={props.key} >
+        <Grid item xs={12} >
             <Paper className={classes.root} elevation={1}>
                 <Grid container spacing={16}  direction="column">
                     <Grid item>
